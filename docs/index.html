@@ -7793,7 +7793,158 @@ a.anchor-link {
     white-space: normal;
   }
 </style>
-<!-- End of mermaid configuration --></head>
+<!-- End of mermaid configuration -->
+<style id="claude-dark-theme-override">
+:root {
+  --jp-layout-color0: #131417;
+  --jp-layout-color1: #1c1e22;
+  --jp-layout-color2: #2a2d33;
+  --jp-layout-color3: #3d4149;
+  --jp-layout-color4: #52575f;
+  --jp-inverse-layout-color0: #ffffff;
+  --jp-inverse-layout-color1: #ffffff;
+  --jp-inverse-layout-color2: #131417;
+  --jp-inverse-layout-color3: #131417;
+  --jp-inverse-layout-color4: #1c1e22;
+
+  --jp-content-font-color0: #ffffff;
+  --jp-content-font-color1: #e4e6eb;
+  --jp-content-font-color2: rgba(228, 230, 235, 0.75);
+  --jp-content-font-color3: rgba(228, 230, 235, 0.5);
+  --jp-content-link-color: #6cb6ff;
+
+  --jp-ui-font-color0: #ffffff;
+  --jp-ui-font-color1: rgba(255, 255, 255, 0.87);
+  --jp-ui-font-color2: rgba(255, 255, 255, 0.6);
+  --jp-ui-font-color3: rgba(255, 255, 255, 0.4);
+  --jp-ui-inverse-font-color0: rgba(0, 0, 0, 1);
+  --jp-ui-inverse-font-color1: rgba(0, 0, 0, 0.8);
+  --jp-ui-inverse-font-color2: rgba(0, 0, 0, 0.5);
+  --jp-ui-inverse-font-color3: rgba(0, 0, 0, 0.3);
+
+  --jp-border-color0: #52575f;
+  --jp-border-color1: #464a52;
+  --jp-border-color2: #383c43;
+  --jp-border-color3: #2a2d33;
+  --jp-inverse-border-color: #9e9e9e;
+  --jp-toolbar-border-color: var(--jp-border-color1);
+  --jp-toolbar-background: var(--jp-layout-color1);
+  --jp-toolbar-active-background: var(--jp-layout-color0);
+  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+
+  --jp-editor-selected-background: #2d3f57;
+  --jp-editor-selected-focused-background: #0d4a90;
+  --jp-editor-cursor-color: var(--jp-ui-font-color0);
+
+  --jp-mirror-editor-keyword-color: #6cb6ff;
+  --jp-mirror-editor-atom-color: #e2a478;
+  --jp-mirror-editor-number-color: #b5cea8;
+  --jp-mirror-editor-def-color: #dcdcaa;
+  --jp-mirror-editor-variable-color: #e4e6eb;
+  --jp-mirror-editor-variable-2-color: #9cdcfe;
+  --jp-mirror-editor-variable-3-color: #4ec9b0;
+  --jp-mirror-editor-punctuation-color: #cfd2d8;
+  --jp-mirror-editor-property-color: #9cdcfe;
+  --jp-mirror-editor-operator-color: #cfd2d8;
+  --jp-mirror-editor-comment-color: #7a9d6f;
+  --jp-mirror-editor-string-color: #e2a478;
+  --jp-mirror-editor-string-2-color: #e2a478;
+  --jp-mirror-editor-meta-color: #cfd2d8;
+  --jp-mirror-editor-qualifier-color: #cfd2d8;
+  --jp-mirror-editor-builtin-color: #4ec9b0;
+  --jp-mirror-editor-bracket-color: #cfd2d8;
+  --jp-mirror-editor-tag-color: #6cb6ff;
+  --jp-mirror-editor-attribute-color: #9cdcfe;
+  --jp-mirror-editor-header-color: #6cb6ff;
+  --jp-mirror-editor-quote-color: #7a9d6f;
+  --jp-mirror-editor-link-color: #6cb6ff;
+  --jp-mirror-editor-error-color: #f47b7b;
+  --jp-mirror-editor-hr-color: #cfd2d8;
+
+  --jp-rendermime-error-background: rgba(244, 71, 71, 0.15);
+  --jp-rendermime-table-row-background: rgba(255, 255, 255, 0.045);
+  --jp-rendermime-table-row-hover-background: rgba(108, 182, 255, 0.15);
+
+  --jp-cell-editor-background: var(--jp-layout-color1);
+  --jp-cell-editor-border-color: var(--jp-border-color1);
+  --jp-cell-editor-active-background: var(--jp-layout-color1);
+  --jp-cell-editor-active-border-color: #6cb6ff;
+
+  --jp-cell-prompt-not-active-font-color: rgba(255, 255, 255, 0.4);
+  --jp-cell-inprompt-font-color: #6cb6ff;
+  --jp-cell-outprompt-font-color: #e2a478;
+
+  --jp-dialog-background: rgba(0, 0, 0, 0.7);
+}
+
+html, body.jp-Notebook {
+  background-color: var(--jp-layout-color0) !important;
+}
+
+/* keep raster figures (matplotlib etc.) readable on a dark page */
+.jp-RenderedImage {
+  background: #ffffff;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.dataframe {
+  border: 1px solid var(--jp-border-color2);
+}
+
+/* ---- collapsible code cells ---- */
+.claude-code-toggle-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 24px;
+  background: var(--jp-layout-color1);
+  border-bottom: 1px solid var(--jp-border-color1);
+  margin-bottom: 8px;
+}
+
+.claude-toggle-all-btn {
+  font-family: var(--jp-code-font-family, monospace);
+  font-size: 13px;
+  color: var(--jp-ui-font-color1);
+  background: var(--jp-layout-color2);
+  border: 1px solid var(--jp-border-color1);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.claude-toggle-all-btn:hover {
+  background: var(--jp-layout-color3);
+}
+
+.claude-cell-toggle-btn {
+  font-family: var(--jp-code-font-family, monospace);
+  font-size: 12px;
+  color: var(--jp-content-font-color2);
+  background: var(--jp-layout-color2);
+  border: 1px solid var(--jp-border-color1);
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 4px 0 4px 44px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.claude-cell-toggle-btn:hover {
+  color: var(--jp-content-font-color0);
+  background: var(--jp-layout-color3);
+}
+
+.jp-CodeCell.claude-code-collapsed > .jp-Cell-inputWrapper {
+  display: none;
+}
+</style>
+
+</head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6e54fad4">
@@ -10733,5 +10884,60 @@ through something closer to the Exit Multiple method's implicit growth story.</l
 </div>
 </div>
 </main>
+
+<script id="claude-collapsible-code">
+document.addEventListener("DOMContentLoaded", function () {
+  var codeCells = Array.prototype.slice.call(document.querySelectorAll(".jp-CodeCell"));
+  if (!codeCells.length) return;
+
+  var bar = document.createElement("div");
+  bar.className = "claude-code-toggle-bar";
+  var allBtn = document.createElement("button");
+  allBtn.className = "claude-toggle-all-btn";
+  bar.appendChild(allBtn);
+  document.body.insertBefore(bar, document.body.firstChild);
+
+  function setCellState(cell, collapsed) {
+    cell.classList.toggle("claude-code-collapsed", collapsed);
+    var btn = cell.querySelector(".claude-cell-toggle-btn");
+    if (btn) btn.textContent = collapsed ? "\u25B8 Show code" : "\u25BE Hide code";
+  }
+
+  function allCollapsed() {
+    return codeCells.every(function (c) {
+      return c.classList.contains("claude-code-collapsed");
+    });
+  }
+
+  function refreshAllBtn() {
+    allBtn.textContent = allCollapsed() ? "\u25B8 Expand all code" : "\u25BE Collapse all code";
+  }
+
+  codeCells.forEach(function (cell) {
+    var wrapper = cell.querySelector(".jp-Cell-inputWrapper");
+    if (!wrapper) return;
+    var btn = document.createElement("button");
+    btn.className = "claude-cell-toggle-btn";
+    btn.addEventListener("click", function () {
+      var collapsed = !cell.classList.contains("claude-code-collapsed");
+      setCellState(cell, collapsed);
+      refreshAllBtn();
+    });
+    cell.insertBefore(btn, wrapper);
+    setCellState(cell, true); // collapsed by default
+  });
+
+  allBtn.addEventListener("click", function () {
+    var collapseAll = !allCollapsed();
+    codeCells.forEach(function (cell) {
+      setCellState(cell, collapseAll);
+    });
+    refreshAllBtn();
+  });
+
+  refreshAllBtn();
+});
+</script>
+
 </body>
 </html>
